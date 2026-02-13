@@ -1,7 +1,6 @@
 import "./App.css";
 import useSound from "use-sound";
 import { getRandomNumber } from "./utils/utils";
-import React from "react";
 
 export interface PlayOptions {
   id?: string;
@@ -13,16 +12,24 @@ export type PlayFunction = (options?: PlayOptions) => void;
 
 function App() {
   const globalVolume = 10; // Adjust the volume as needed
-  const [playAwoooga] = useSound("/awoooga.m4a", { volume: globalVolume });
-  const [playAah] = useSound("/aah.m4a", { volume: globalVolume });
-  const [playBye] = useSound("/bye.m4a", { volume: globalVolume });
-  const [playChat] = useSound("/chat.m4a", { volume: globalVolume });
-  const [playEuh] = useSound("/euh.m4a", { volume: globalVolume });
-  const [playNyooo] = useSound("/nyooo.m4a", { volume: globalVolume });
-  const [playOink] = useSound("/oink.m4a", { volume: globalVolume });
-  const [playSnort] = useSound("/snort.m4a", { volume: globalVolume });
-  const [playStinky] = useSound("/stinky.m4a", { volume: globalVolume });
-  const [playWee] = useSound("/wee.m4a", { volume: globalVolume });
+  const [playAwoooga] = useSound("src/assets/awoooga.m4a", {
+    volume: globalVolume,
+  });
+  const [playAah] = useSound("src/assets/aah.m4a", { volume: globalVolume });
+  const [playBye] = useSound("src/assets/bye.m4a", { volume: globalVolume });
+  const [playChat] = useSound("src/assets/chat.m4a", { volume: globalVolume });
+  const [playEuh] = useSound("src/assets/euh.m4a", { volume: globalVolume });
+  const [playNyooo] = useSound("src/assets/nyooo.m4a", {
+    volume: globalVolume,
+  });
+  const [playOink] = useSound("src/assets/oink.m4a", { volume: globalVolume });
+  const [playSnort] = useSound("src/assets/snort.m4a", {
+    volume: globalVolume,
+  });
+  const [playStinky] = useSound("src/assets/stinky.m4a", {
+    volume: globalVolume,
+  });
+  const [playWee] = useSound("src/assets/wee.m4a", { volume: globalVolume });
   const sounds = [
     () => playAwoooga(),
     () => playAah(),
